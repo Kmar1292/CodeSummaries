@@ -1,5 +1,5 @@
 # Introduction
-During my time as a game developer intern at Prosper I.T. Consulting, I engaged in two live projects that each lasted for two weeks. In the first live project, I worked with a team to recreate several classic arcade games in Unity. I created a modern version of the classic game Asteroids with WASD input to control player movement. Over the course of this two week sprint, I gained valuable experience using Unity and C# to create a game nearly from scratch. This project also brought me experience in working with a team including how to communicate effectively with teammates and reaching out in order to problem-solve any roadblocks I or other teammates had. In the second live project, I worked with a team to prototype a game in Unreal Engine 5. In this project, I worked with several systems within Unreal Engine including blueprints, metasounds, Lumen, Nanite, and more. 
+During my time as a game developer intern at Prosper I.T. Consulting, I engaged in two live projects that each lasted for two weeks. In the first live project, I worked with a team to recreate several classic arcade games in Unity. I created a modern version of the classic game Asteroids with WASD input to control player movement. Over the course of this two week sprint, I gained valuable experience using Unity and C# to create a game nearly from scratch. This project also brought me experience in working with a team including how to communicate effectively with teammates and reaching out in order to problem-solve any roadblocks I or other teammates had. In the second live project, I worked with a team to prototype a game in Unreal Engine 5. In this project, I worked with several systems within Unreal Engine including blueprints, metasounds, Lumen, Nanite, Niagara, and more. 
 
 # Projects
 * [Asteroids - Unity](#Asteroids)
@@ -179,3 +179,25 @@ public void CreateAsteroid(float leftEdge, float rightEdge, float botEdge, float
 ```
 
 ## Obstacle Course - Unreal Engine
+### Checkpoint
+Once the player reaches a checkpoint, an event dispatcher is called in order to begin the next obstacle. The respawn point is set to the location of the checkpoint.
+![Checkpoint blueprint](/BP_Checkpoint.png)
+
+### Explosion Obstacles
+This blueprint creates explosions that loop at certain time intervals.
+![Spawning Explosions](BP_Explosion_SpawnExplosion.png)
+![Explosion Blueprint](BP_Explosion_EventGraph.png)
+
+### Red Light, Green Light
+This obstacle is a recreation of the popular game Red Light, Green Light in which the player is able to move during a green light and not able to move during a red light.
+![Red Light, Green Light blueprint](BP_RedLightGreenLight.png)
+
+### Blackhole
+This obstacle pulls the player in towards the middle for random periods of time. If the player touches the middle of the arena, the player is killed.
+![Blackhole Effect](BP_Blackhole_Pull.png)
+![Blackhole blueprint](BP_Blackhole_EventGraph.png)
+
+### Footsteps
+Minor pitch variance of footsteps was done through Unreal Engine's MetaSounds system. The sound of the footsteps was synced to the player's run and walk animations for a more realistic experience.
+![MetaSounds Footsteps](MS_Footsteps.png)
+![Syncing footsteps to walk/run animation](MS_Footsteps_RunningAnimation.png)
